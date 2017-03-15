@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Learning Vue.js</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+    <link rel="stylesheet" href="style.css">
+  </head>
+  <body class="container">
+    <div class="jumbotron" id="greeting">
+      <h3> {{ message }} </h3>
+      <p> {{ cta }} </p>
+    </div>
+
+    <div id="numbersList">
+      <h3> {{ title }} </h3>
+      <ul>
+        <li v-for="DLKFASJ in numbers"> {{ DLKFASJ }} </li>
+        <!-- for (var i = 0; i < numbers.length; i++) {
+          <li> numbers[i] </li>
+        } -->
+      </ul>
+    </div>
+
+    <div id="dogView">
+      <h3> Best of show </h3>
+      <div class="panel panel-default" v-for="d in dogs">
+        <div class="panel-heading">
+          <h3 class="panel-title">{{ d.name }}</h3>
+        </div>
+        <div class="panel-body">
+          <img :src="d.img" alt="" class="dog-img">
+        </div>
+        <div class="panel-footer">
+          {{ d.breed }}
+        </div>
+      </div>
+    </div>
+
+    <script src="https://unpkg.com/vue"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+    <script src="app.js"> </script>
+  </body>
+</html>
